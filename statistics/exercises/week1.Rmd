@@ -1,0 +1,123 @@
+---
+title: "Statistics Week 1"
+author: "Ronald Dijks"
+date: "9/22/2019"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Exercise 1
+
+### 1.a. Write an expression to compute the sum of the number 3 and 4.
+```{r}
+3 + 4
+```
+
+### 1.b. Write an expression to determine if the product of 4 and 5 is equal to 21.
+```{r}
+4 * 5 == 21
+```
+
+### 1.c. Create the variables x, y, z with the values (2, 3.5, 7).
+```{r}
+x = 2
+y = 3.5
+z = 7
+```
+
+### 1.d. Exploit a function of R to investigate the datatype of the three variables x, y, z.
+```{r}
+str(x)
+str(y)
+str(z)
+```
+
+### 1.e. Write an expression to compute the multiplication of the three variables x, y, z.
+```{r}
+x * y * z
+```
+
+### 1.f. Write a boolean expression which checks if the product of x,y,z is equal to 49.
+```{r}
+x * y * z == 49
+```
+
+### 1.g. Create a variable s with the value "Alexander"
+```{r}
+s = "Alexander"
+```
+
+### 1.h. Look for a function returning the length of a string and use it to determine the length of s.
+```{r}
+nchar(s)
+```
+
+## Exercise 2
+
+### 2.a. Create a variable x with the value 1 trough 10.
+```{r}
+x = 1:10
+```
+
+### 2.b. How can you investigate the length of x?
+```{r}
+length(x)
+```
+
+### 2.c. Multiply x by the number '1.2'.
+```{r}
+x * 1.2
+```
+
+### 2.d. Multiply the first five elements of x by 2.
+```{r}
+c(x[1:5] * 2, x[6:10])
+```
+
+### 2.e. Visualize x using barplot(x).
+```{r}
+barplot(x)
+```
+
+### 2.f. Assign to x the values of all integers from 0 to 10.
+```{r}
+x = 0:9
+```
+
+### 2.g. Create a graph of x against x useing plot(x, x, type="b")
+```{r}
+plot(x, x, type = "b")
+```
+
+### 2.h. Use plot to draw the graph of the function 'y=3x+2' for the values of x between 0 and 10.
+```{r}
+x = 1:9
+plot(x, 3*x+2)
+```
+
+### 2.i. Use plot to draw the graph of the function 'y=sin(x)' for the values of x between 0 and (2*PI) (use atleast 200 points).
+```{r}
+x = seq(0, 2*pi, length.out = 200)
+plot(x, sin(x))
+```
+
+### 2.j. Find out how the graph can be made of only one line (without symbols) and give the graph a
+name (for example "My first R Graph").
+```{r}
+plot(
+  x, 
+  sin(x), 
+  main = "My first R Graph",
+  type = "l"
+)
+```
+
+### 2.k. Find out how the function curve works and use it to plot the values of cos(x) between 0 and 2PI.
+```{r}
+curve(cos, 0, 2*pi, n=200)
+```

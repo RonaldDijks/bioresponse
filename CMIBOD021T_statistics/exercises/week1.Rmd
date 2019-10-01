@@ -11,7 +11,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Exercise 1
+# Exercise 1
 
 ### 1.a. Write an expression to compute the sum of the number 3 and 4.
 ```{r}
@@ -57,7 +57,7 @@ s = "Alexander"
 nchar(s)
 ```
 
-## Exercise 2
+# Exercise 2
 
 ### 2.a. Create a variable x with the value 1 trough 10.
 ```{r}
@@ -120,4 +120,71 @@ plot(
 ### 2.k. Find out how the function curve works and use it to plot the values of cos(x) between 0 and 2PI.
 ```{r}
 curve(cos, 0, 2*pi, n=200)
+```
+
+# Exercise 3
+
+### 3.a. Read the dataset Ozone into a variable called "air".
+```{r}
+setwd("/home/ronald/minor/CMIBOD021T_statistics/exercises")
+air = read.csv("ozone.csv")
+```
+
+### 3.b. Which type of object is air?
+```{r}
+str(air)
+```
+
+### 3.c. What are the names of the columns of air?
+```{r}
+colnames(air)
+```
+
+### 3.d. From how many lines is air composed?
+```{r}
+nrow(air)
+```
+
+### 3.e. In some cells you see the value "NA", what does this mean?
+NA stands for `Not Available`. This is a value that gets used when R cannot parse a value or the value is missing.
+
+### 3.f. Try to compute the average ozone level using the mean command, why is the result NA?
+Because NA is not a number, and thus you cannot compute a significant value from any calculation that includes NA.
+
+### 3.g. Find out how to exclude NA values from the computation.
+By using the `na.rm` argument on the `mean` function.
+
+### 3.h. Compute the mean temperature of the dataset.
+```{r}
+mean(air$Temp, na.rm = TRUE)
+```
+
+### 3.i. How many observations of the dataset have a temperature strictly less than 67 and how many have one greater of equal to 67?
+```{r}
+obsLess = sum(air$Temp < 67)
+obsLess
+obsGreater = sum(air$Temp >= 67)
+obsGreater
+```
+
+### 3.j. Create a vector "hot" with booleans corresponding to the temperatures that are higher than 80 Fahrenheit. Use this to split the Ozone dataset in two, the hot days and the cold days.
+```{r}
+hot = air$Temp > 80
+hotDays = subset(air, Temp > 80)
+coldDays = subset(air, Temp <= 80)
+```
+
+### 3.k. Determinethe mean ozone levels of warm days and cold days.
+```{r}
+mean(hotDays$Ozone, na.rm = T)
+mean(coldDays$Ozone, na.rm = T)
+```
+
+### 3.l. Produce a plot containing the two boxplots of ozone levels.
+```{r}
+hotDays$Kind <- rep("Hot", nrow(hotDays))
+coldDays$Kind <- rep("Cold", nrow(coldDays))
+allDays = rbind(hotDays, coldDays)
+
+boxplot(Temp~Kind, allDays)
 ```

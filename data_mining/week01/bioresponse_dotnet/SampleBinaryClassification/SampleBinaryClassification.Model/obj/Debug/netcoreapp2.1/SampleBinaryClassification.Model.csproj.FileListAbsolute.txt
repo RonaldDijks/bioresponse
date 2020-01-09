@@ -1,9 +1,0 @@
-/home/ronald/minor/data_mining/week01/bioresponse_dotnet/SampleBinaryClassification/SampleBinaryClassification.Model/bin/Debug/netcoreapp2.1/MLModel.zip
-/home/ronald/minor/data_mining/week01/bioresponse_dotnet/SampleBinaryClassification/SampleBinaryClassification.Model/bin/Debug/netcoreapp2.1/SampleBinaryClassification.Model.deps.json
-/home/ronald/minor/data_mining/week01/bioresponse_dotnet/SampleBinaryClassification/SampleBinaryClassification.Model/bin/Debug/netcoreapp2.1/SampleBinaryClassification.Model.dll
-/home/ronald/minor/data_mining/week01/bioresponse_dotnet/SampleBinaryClassification/SampleBinaryClassification.Model/bin/Debug/netcoreapp2.1/SampleBinaryClassification.Model.pdb
-/home/ronald/minor/data_mining/week01/bioresponse_dotnet/SampleBinaryClassification/SampleBinaryClassification.Model/obj/Debug/netcoreapp2.1/SampleBinaryClassification.Model.csprojAssemblyReference.cache
-/home/ronald/minor/data_mining/week01/bioresponse_dotnet/SampleBinaryClassification/SampleBinaryClassification.Model/obj/Debug/netcoreapp2.1/SampleBinaryClassification.Model.AssemblyInfoInputs.cache
-/home/ronald/minor/data_mining/week01/bioresponse_dotnet/SampleBinaryClassification/SampleBinaryClassification.Model/obj/Debug/netcoreapp2.1/SampleBinaryClassification.Model.AssemblyInfo.cs
-/home/ronald/minor/data_mining/week01/bioresponse_dotnet/SampleBinaryClassification/SampleBinaryClassification.Model/obj/Debug/netcoreapp2.1/SampleBinaryClassification.Model.dll
-/home/ronald/minor/data_mining/week01/bioresponse_dotnet/SampleBinaryClassification/SampleBinaryClassification.Model/obj/Debug/netcoreapp2.1/SampleBinaryClassification.Model.pdb
